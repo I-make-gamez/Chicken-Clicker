@@ -1,3 +1,8 @@
 body {
     background: radial-gradient(#ff0000 0%, #791111 100%);
 }
+
+click {
+    width: 25%;
+    height: 25%;
+}
