@@ -1,11 +1,9 @@
 var eggs = 0;
-var eps = 0;
 
-const click = document.getElementById("click");
-const egg = document.getElementById("clicks");
+const para = document.getElementById("para");
+const btn = document.getElementById("btn");
 
-function click() {
-    eggs += 1;
-    egg.innerHTML = "Eggs: " + eggs;
-};
-
+btn.addEventListener("click", function() {
+  eggs += 1;
+  para.innerHTML = "Eggs: " + eggs;
+});

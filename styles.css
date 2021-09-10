@@ -1,8 +1,13 @@
 body {
     background: radial-gradient(#ff0000 0%, #791111 100%);
+    text-align: center;
 }
 
-click {
-    width: 25%;
-    height: 25%;
+#para {
+    text-align: center;
+}
+
+#btn {
+    width: 100px;
+    height: 100px;
 }
