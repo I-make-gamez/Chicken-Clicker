@@ -5,5 +5,5 @@ const btn = document.getElementById("btn");
 
 btn.addEventListener("click", function() {
   eggs += 1;
-  para.innerHTML = "Eggs: " + eggs;
+  para.innerHTML = "Clicks: " + eggs;
 });
