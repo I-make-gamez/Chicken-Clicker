@@ -25,6 +25,8 @@ function eraseData() {
   if(answer = "y") {
     eggs = localStorage.setItem("clicks", 0)
     para.innerHTML = "Clicks: 0"
+  }else {
+    return;
   }
   
 }
