@@ -1,4 +1,4 @@
-var eggs = 150;
+var eggs = 0;
 
 //cpwr
 var cp_price = 150
@@ -16,14 +16,23 @@ const ac = document.getElementsByClassName("cps")[0]
 const stats_cpwr = document.getElementById("stats_cpwr");
 
 function loadData() {
-  eggs = localStorage.getItem("clicks")
-  para.innerHTML = "Clicks: " + eggs;
+  eggs = JSON.parse(localStorage.getItem("clicks"));
+  para.innerHTML = `Clicks: ${eggs}`
 };
+
+function eraseData() {
+  let answer = window.prompt("Are You Sure? This Will Clear ALL Data.", "y/n")
+  if(answer = "y") {
+    eggs = localStorage.setItem("clicks", 0)
+    para.innerHTML = "Clicks: 0"
+  }
+  
+}
 
 btn.addEventListener("click", function() {
   eggs += cp_pwr;
   para.innerHTML = "Clicks: " + eggs;
-  storage.setItem("clicks", eggs)
+  localStorage.setItem("clicks", eggs)
 });
 
 cpwr.addEventListener("click", function() {
