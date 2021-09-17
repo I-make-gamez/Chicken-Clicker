@@ -13,11 +13,13 @@ const para = document.getElementById("para");
 const btn = document.getElementById("btn");
 const cpwr = document.getElementsByClassName("cpwr")[0]
 const ac = document.getElementsByClassName("cps")[0]
+const stats_cpwr = document.getElementById("stats_cpwr");
 
 
 btn.addEventListener("click", function() {
   eggs += cp_pwr;
   para.innerHTML = "Clicks: " + eggs;
+  localStorage.setItem()
 });
 
 cpwr.addEventListener("click", function() {
@@ -25,6 +27,8 @@ cpwr.addEventListener("click", function() {
     eggs -= cp_price;
     para.innerHTML = "Clicks: " + eggs;
     cp_pwr += 1
+    stats_cpwr.innerHTML = "Clickpower: " + cp_pwr;
+
   }
 });
 
