@@ -15,11 +15,15 @@ const cpwr = document.getElementsByClassName("cpwr")[0]
 const ac = document.getElementsByClassName("cps")[0]
 const stats_cpwr = document.getElementById("stats_cpwr");
 
+function loadData() {
+  eggs = localStorage.getItem("clicks")
+  para.innerHTML = "Clicks: " + eggs;
+};
 
 btn.addEventListener("click", function() {
   eggs += cp_pwr;
   para.innerHTML = "Clicks: " + eggs;
-  localStorage.setItem()
+  storage.setItem("clicks", eggs)
 });
 
 cpwr.addEventListener("click", function() {
