@@ -22,11 +22,12 @@ function loadData() {
 
 function eraseData() {
   var answer = prompt("Are You Sure? This Will Clear ALL Data.", "y/n")
-  if(answer === "y") {
-    eggs = localStorage.setItem("clicks", 0)
-    para.innerHTML = "Clicks: 0"
-  }else if(answer === "n") {
-    return;
+  switch(answer) {
+    case("y"):
+      eggs = localStorage.setItem("clicks", 0)
+      para.innerHTML = "Clicks: 0"  
+    case("n"):
+      return
   }
 }
 
