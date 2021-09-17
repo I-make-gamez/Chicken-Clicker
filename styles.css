@@ -42,6 +42,7 @@ body {
     font-size: 90%;
     width: 200px;
     float: left;
+    margin: 50px;
 }
 
 .cps {
@@ -49,5 +50,6 @@ body {
     background-color: azure;
     font-size: 90%;
     width: 200px;
-    float: right;
+    float: left;
+    margin: 50px;
 }

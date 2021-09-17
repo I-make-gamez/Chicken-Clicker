@@ -21,11 +21,11 @@ function loadData() {
 };
 
 function eraseData() {
-  let answer = window.prompt("Are You Sure? This Will Clear ALL Data.", "y/n")
-  if(answer = "y") {
+  var answer = prompt("Are You Sure? This Will Clear ALL Data.", "y/n")
+  if(answer === "y") {
     eggs = localStorage.setItem("clicks", 0)
     para.innerHTML = "Clicks: 0"
-  }else if(answer = "n") {
+  }else if(answer === "n") {
     return;
   }
 }
