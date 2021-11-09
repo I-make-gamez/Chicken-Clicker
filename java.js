@@ -1,12 +1,12 @@
 var eggs = 0;
+var page = window
 
 //cpwr
 var cp_price = 150
 var cp_pwr = 1
 
 //ac
-var ac_price = 50
-var ac_active = false
+var ac_price = 300
 var ac_cps = 0
 
 const para = document.getElementById("para");
@@ -17,7 +17,11 @@ const stats_cpwr = document.getElementById("stats_cpwr");
 
 function loadData() {
   eggs = JSON.parse(localStorage.getItem("clicks"));
-  para.innerHTML = `Clicks: ${eggs}`
+  if(eggs != null){
+    para.innerHTML = `Clicks: ${eggs}`
+  }else{
+    para.innerHTML = `Clicks: 0`
+  }
 };
 
 function eraseData() {
@@ -48,5 +52,25 @@ cpwr.addEventListener("click", function() {
 });
 
 ac.addEventListener("click", function() {
-  eggs = eggs
+  if(eggs >= ac_price){
+    eggs -= ac_price;
+    ac_cps += 2
+    setInterval(() => {
+      eggs += ac_cps;
+      para.innerHTML = "Clicks: " + eggs;
+      localStorage.setItem("clicks", eggs)
+    }, 2000); 
+  }
 })
+
+document.onkeydown=function(e){
+  var e = e || page.event;
+  if(e.ctrlKey && e.altKey && e.key === 'm') {
+    let total = page.prompt(`Hello, You've reached the admin menu\nEnter a number [1-1]`)
+    if(total = '1'){
+      alert('soon')
+    }
+  }
+};
+
+document.addEventListener('keyup', keycmd, false);
