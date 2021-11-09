@@ -59,16 +59,18 @@ ac.addEventListener("click", function() {
       eggs += ac_cps;
       para.innerHTML = "Clicks: " + eggs;
       localStorage.setItem("clicks", eggs)
-    }, 2000); 
+    }, 1000); 
   }
 })
 
 document.onkeydown=function(e){
   var e = e || page.event;
   if(e.ctrlKey && e.altKey && e.key === 'm') {
-    let total = page.prompt(`Hello, You've reached the admin menu\nEnter a number [1-1]`)
-    if(total = '1'){
-      alert('soon')
+    let ans = page.prompt(`Hello, You've reached the admin menu\nEnter a number [1-1]`)
+    if(ans = '1'){
+      let total = page.prompt(`Enter Clicks Needed.`)
+      eggs += parseInt(total);
+      para.innerHTML = "Clicks: " + eggs;
     }
   }
 };
